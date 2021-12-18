@@ -20,21 +20,21 @@ import org.apache.camel.Message;
 
 @Component
 public class MySpringBootRouter extends RouteBuilder {
+
+	String erpUri = "https://5298967-sb1.restlets.api.netsuite.com/app/site/hosting/restlet.nl?";
+	//String erpBase = "https://5298967-sb1.restlets.api.netsuite.com/app/site/hosting/restlet.nl?";
+	String erpBase = "https://localhost/app/site/hosting/restlet.nl?";
+	String erpMovements = "script=907&deploy=2";
+	String erpAdjusments = "script=907&deploy=2";
+	String erpPicking = "script=907&deploy=2";
+	String erpReceipt = "script=907&deploy=2";
+	String erpShipment = "script=907&deploy=2";
 	
 	@Autowired
 	private Environment env;
 
     @Override
     public void configure() throws Exception {
-    	
-    	String erpUri = "";
-		//String erpBase = "https://5298967-sb1.restlets.api.netsuite.com/app/site/hosting/restlet.nl?";
-		String erpBase = "https://localhost/app/site/hosting/restlet.nl?";
-    	String erpMovements = "script=907&deploy=2";
-		String erpAdjusments = "script=907&deploy=2";
-		String erpPicking = "script=907&deploy=2";
-		String erpReceipt = "script=907&deploy=2";
-		String erpShipment = "script=907&deploy=2";
     	
     	onException(HttpOperationFailedException.class)
     		.handled(true)
