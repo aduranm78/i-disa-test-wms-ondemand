@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
-  <artifactId>my-camel-app</artifactId>
+  <artifactId>i-disa-test-wms-ondemand</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
 
