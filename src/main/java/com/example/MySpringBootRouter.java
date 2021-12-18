@@ -3,10 +3,9 @@ package com.example;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.http.base.HttpOperationFailedException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.camel.model.rest.RestBindingMode;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
-
-import java.net.URLEncoder;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
