@@ -55,11 +55,11 @@ public class MySpringBootRouter extends RouteBuilder {
 		//          .type(Customer.class).outType(CustomerSuccess.class)
 				.to("direct:get-customer");
 
-		/*from("direct:get-customer")
-			.setHeader("HTTP_METHOD", constant("GET"))
-			.to("direct:request");*/
-
 		from("direct:get-customer")
+			.setHeader("HTTP_METHOD", constant("GET"))
+			.to("direct:request");
+
+		from("direct:request")
     		.process(exchange -> {
     			String wmsUri = env.getProperty("wms.uri");
 				System.out.println("URL WMS: " + wmsUri);
