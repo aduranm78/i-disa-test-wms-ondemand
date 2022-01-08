@@ -35,7 +35,7 @@ public class MySpringBootRouter extends RouteBuilder {
     	
     	String erpUri = "https://5298967-sb1.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=626&deploy=1";
     	
-		restConfiguration()
+		restConfiguration().route
 			.component("netty-http")
 			.port("8080")
 			.bindingMode(RestBindingMode.auto);
@@ -52,7 +52,7 @@ public class MySpringBootRouter extends RouteBuilder {
 			//          .type(Customer.class).outType(CustomerSuccess.class)
 					.to("direct:post-customer");
 
-		from("direct:post-customer")
+		from("direct:post-customer").routeId("{{route.id}}")
 			.setHeader("HTTP_METHOD", constant("POST"))
 			.to("direct:request");
 		from("direct:put-customer")
