@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>my-camel-app</name>
+	<name>customer-camel</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -36,6 +36,11 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+			<name>org.hibernate.eclipse.console.hibernateBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
 			<name>org.eclipse.m2e.core.maven2Builder</name>
 			<arguments>
 			</arguments>
@@ -50,10 +55,11 @@
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 		<nature>org.jboss.tools.jst.web.kb.kbnature</nature>
 		<nature>org.jboss.tools.cdi.core.cdinature</nature>
+		<nature>org.hibernate.eclipse.console.hibernateNature</nature>
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1639891016425</id>
+			<id>1639787079262</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
